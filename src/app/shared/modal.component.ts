@@ -42,25 +42,4 @@ export class ModalComponent implements OnInit {
   onYes = () => {
     this.handleYes.emit();
   }
-
-  // close = () => this.isOpen = false;
-  // show = () => this.isOpen = true;
 }
-
-// <h1>{message}</h1>
-// <div className="buttons">
-//   <button
-//     className="button is-light"
-//     data-modal-response="yes"
-//     onClick={onClick}
-//   >
-//     Yes
-//   </button>
-//   <button
-//     className="button is-light"
-//     data-modal-response="no"
-//     onClick={onClick}
-//   >
-//     No
-//   </button>
-// </div>
