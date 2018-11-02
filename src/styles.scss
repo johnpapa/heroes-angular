@@ -158,17 +158,13 @@ p.card-header-title {
   display: none;
 }
 
-#modal > div {
-  background-color: white;
-  max-width: 500px;
-  padding: 25px;
-  border-radius: 2px;
-  text-align: center;
+.modal-card-foot button {
+  display: inline-block;
+  width: 80px;
 }
 
-#modal .buttons button {
-  display: inline-block;
-  margin: auto;
+.modal-card-head, .modal-card-body {
+  text-align: center;
 }
 
 .field {
