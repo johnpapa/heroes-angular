@@ -52,7 +52,6 @@ export class HeroesComponent implements OnInit {
 
   save(hero: Hero) {
     if (this.selected && this.selected.name) {
-      hero.id = `Hero${hero.name}`; // Making our own key - or we could config ngrxdata to let it pass to db
       this.update(hero);
     } else {
       this.add(hero);
