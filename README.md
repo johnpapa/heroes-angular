@@ -1,27 +1,47 @@
-# HeroesAngular
+# heroes-angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
+This project was created to help represent a fundamental app written with React. The heroes and villains theme is used throught the app.
 
-## Development server
+by [John Papa](http://twitter.com/john_papa)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Comparative apps written with Vue and React can be found at at [github.com/johnpapa/heroes-vue](https://github.com/johnpapa/heroes-vue) and [github.com/johnpapa/heroes-react](https://github.com/johnpapa/heroes-react)
 
-## Code scaffolding
+These apps contain:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- routing
+- container/presenter components
+- redux state pattern
+- abstracted CSS
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+1. Clone this repository
 
-## Running unit tests
+   ```bash
+   git clone https://github.com/johnpapa/heroes-angular.git
+   cd heroes-angular
+   ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Install the npm packages
 
-## Running end-to-end tests
+   ```bash
+   npm install
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+1. Run the app!
 
-## Further help
+   ```bash
+   npm run quick
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Cypress Tests
+
+1. You can execute all of the UI tests by running the following steps
+
+   ```bash
+   npm run cypress
+   ```
+
+## Problems or Suggestions
+
+[Open an issue here](https://github.com/johnpapa/heroes-angular/issues)

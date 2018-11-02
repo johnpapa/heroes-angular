@@ -1,0 +1,32 @@
+<div class="content-container">
+  <!-- <ListHeader title="Heroes" handleAdd={this.addHero} handleRefresh={getHeroes} routePath="/heroes" /> -->
+  <app-list-header title="Heroes"></app-list-header>
+  <div class="columns is-multiline is-variable">
+    <div class="column is-6">
+      <div *ngIf="heroes$ | async as heroes">
+        <app-hero-list [heroes]="heroes" (selectedHero)="selected" (handleSelectHero)="select($event)"
+          (handleDeleteHero)="delete($event)"></app-hero-list>
+        )}
+      </div>
+      <!-- <router-outlet></router-outlet> -->
+      <!-- <Switch>
+        <Route exact path="/heroes" component={()=> (
+          <HeroList heroes={heroes} selectedHero={selectedHero} handleSelectHero={this.handleSelectHero}
+            handleDeleteHero={this.handleDeleteHero} />
+          )}
+          />
+          <Route exact path="/heroes/:id" component={()=> {
+            return (
+            <HeroDetail hero={selectedHero} handleCancelHero={this.handleCancelHero} handleSaveHero={this.handleSaveHero}
+              key={selectedHero && selectedHero.id} />
+            );
+            }}
+            />
+      </Switch> -->
+    </div>
+  </div>
+
+  <!-- {showModal && (
+  <ModalYesNo message={`Would you like to delete ${heroToDelete.name}?`} onClick={this.handleModalReponse} />
+  )} -->
+</div>
