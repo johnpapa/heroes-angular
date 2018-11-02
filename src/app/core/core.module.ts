@@ -8,6 +8,8 @@ import { HeaderComponent } from './header.component';
 import { NotFoundComponent } from './not-found.component';
 import { SharedModule } from '../shared/shared.module';
 
+const components = [NavComponent, HeaderComponent, NotFoundComponent];
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,16 +17,7 @@ import { SharedModule } from '../shared/shared.module';
     RouterModule, // because we use <router-outlet> and routerLink
     SharedModule
   ],
-  exports: [
-    NavComponent,
-    HeaderComponent,
-    NotFoundComponent,
-    FontAwesomeModule
-  ],
-  declarations: [
-    NavComponent,
-    HeaderComponent,
-    NotFoundComponent,
-  ]
+  exports: [FontAwesomeModule, components],
+  declarations: [components]
 })
 export class CoreModule {}
