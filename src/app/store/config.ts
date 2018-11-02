@@ -17,10 +17,10 @@ export const defaultDataServiceConfig: DefaultDataServiceConfig = {
   }
 };
 
-export const entityDispatcherDefaultOptions: EntityDispatcherDefaultOptions = {
-  optimisticAdd: false,
-  optimisticDelete: false,
-  optimisticUpdate: false,
-  optimisticUpsert: false,
-  optimisticSaveEntities: false
-};
+// export const entityDispatcherDefaultOptions: EntityDispatcherDefaultOptions = {
+//   optimisticAdd: false,
+//   optimisticDelete: false,
+//   optimisticUpdate: false,
+//   optimisticUpsert: false,
+//   optimisticSaveEntities: false
+// };

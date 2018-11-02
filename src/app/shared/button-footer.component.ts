@@ -9,6 +9,7 @@ import { Hero } from '../core';
       [attr.aria-label]="label"
       role="button"
       tabIndex="0"
+      [attr.data-id]="item.id"
       (click)="handleClick()"
     >
       <i [ngClass]="iconClasses"></i>
@@ -17,14 +18,11 @@ import { Hero } from '../core';
   `
 })
 export class ButtonFooterComponent implements OnInit {
-  @Input()
-  label;
-  @Input()
-  className;
-  @Input()
-  iconClasses;
-  @Input()
-  item;
+  @Input() label;
+  @Input() className;
+  @Input() iconClasses;
+  @Input() item;
+  @Input() dataId;
 
   @Output()
   clicked = new EventEmitter<any>();

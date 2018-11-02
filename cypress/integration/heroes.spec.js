@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 /* eslint-env mocha */
-/* global cy expect */
+/* global cy expect Cypress */
 
 import data from '../../db';
 
@@ -13,22 +13,24 @@ const newHero = {
   description: 'chief of theatre props'
 };
 
-const resetData = () =>
-  cy.request('POST', 'http://localhost:3000/api/reset', data);
+const port = Cypress.env('port');
+const url = `http://localhost:${port}`;
+
+const resetData = () => cy.request('POST', `${url}/api/reset`, data);
 
 const containsHeroes = count =>
   cy.get('.list .name').should('have.length', count);
 
 const detailsAreVisible = visible => {
   const val = visible ? '' : 'not.';
-  // return cy.get('.editarea input[name=name]').should(`${val}be.visible`)
-  return cy.get('.editarea input[name=name]').should(`${val}exist`);
+  // return cy.get('.edit-detail input[name=name]').should(`${val}be.visible`)
+  return cy.get('.edit-detail input[name=name]').should(`${val}exist`);
 };
 
 context('Heroes', () => {
   beforeEach(() => {
     resetData().then(() => {
-      cy.visit('http://localhost:3000');
+      cy.visit(url);
       cy.get('nav ul.menu-list a')
         .contains('Heroes')
         .click();
@@ -47,7 +49,9 @@ context('Heroes', () => {
 
   specify(`Deletes ${heroToDelete.name}`, () => {
     cy.get(`.list .delete-item[data-id=${heroToDelete.id}]`).click();
-    cy.get(`#modal [data-modal-response=yes]`).click();
+
+    // TODO: put back when we get a modal
+    // cy.get(`#modal [data-modal-response=yes]`).click();
 
     containsHeroes(heroCount - 1);
     cy.get(`.list .delete-item[data-id=${heroToDelete.id}]`).should(
@@ -63,7 +67,7 @@ context('Heroes', () => {
     specify(`Shows Details for ${hero.name}`, () => {
       const match = new RegExp(hero.id);
       detailsAreVisible(true);
-      cy.get('.editarea input[name=id]')
+      cy.get('.edit-detail input[name=id]')
         .invoke('val')
         .should('match', match);
     });
@@ -79,14 +83,14 @@ context('Heroes', () => {
     specify(`Saves changes to ${hero.name}`, () => {
       const newDescription = 'slayer of javascript';
       detailsAreVisible(true);
-      cy.get('.editarea input[name=description]')
+      cy.get('.edit-detail input[name=description]')
         .clear()
         .type(newDescription);
-      cy.get('.editarea input[name=description]')
+      cy.get('.edit-detail input[name=description]')
         .invoke('val')
         .should('not.match', new RegExp(hero.description))
         .and('match', new RegExp(newDescription));
-      cy.get('.editarea .save-button').click();
+      cy.get('.edit-detail .save-button').click();
       detailsAreVisible(false);
       cy.get('.list .description').contains(newDescription);
       containsHeroes(heroCount);
@@ -95,14 +99,14 @@ context('Heroes', () => {
     specify(`Cancels changes to ${hero.name}`, () => {
       const newDescription = 'slayer of javascript';
       detailsAreVisible(true);
-      cy.get('.editarea input[name=description]')
+      cy.get('.edit-detail input[name=description]')
         .clear()
         .type(newDescription);
-      cy.get('.editarea input[name=description]')
+      cy.get('.edit-detail input[name=description]')
         .invoke('val')
         .should('not.match', new RegExp(hero.description))
         .and('match', new RegExp(newDescription));
-      cy.get('.editarea .cancel-button').click();
+      cy.get('.edit-detail .cancel-button').click();
       detailsAreVisible(false);
       cy.get('.list .description').contains(hero.description);
       containsHeroes(heroCount);
@@ -116,13 +120,13 @@ context('Heroes', () => {
 
     specify(`Saves changes to ${newHero.name}`, () => {
       detailsAreVisible(true);
-      cy.get('.editarea input[name=name]')
+      cy.get('.edit-detail input[name=name]')
         .clear()
         .type(newHero.name);
-      cy.get('.editarea input[name=description]')
+      cy.get('.edit-detail input[name=description]')
         .clear()
         .type(newHero.description);
-      cy.get('.editarea .save-button').click();
+      cy.get('.edit-detail .save-button').click();
       detailsAreVisible(false);
       cy.get('.list .description').contains(newHero.description);
       containsHeroes(heroCount + 1);
@@ -131,20 +135,19 @@ context('Heroes', () => {
 
   context(`Direct Routing`, () => {
     specify(`Routes to /heroes directly and see hero list`, () => {
-      cy.visit('http://localhost:3000');
+      cy.visit(url);
       cy.wait(1000);
       cy.location().should(loc => {
-        expect(loc.host).to.eq('localhost:3000');
+        expect(loc.host).to.eq(`localhost:${port}`);
         expect(loc.hostname).to.eq('localhost');
-        expect(loc.href).to.eq('http://localhost:3000/heroes');
-        expect(loc.origin).to.eq('http://localhost:3000');
-        expect(loc.port).to.eq('3000');
+        expect(loc.href).to.eq(`${url}/heroes`);
+        expect(loc.origin).to.eq(url);
+        expect(loc.port).to.eq(port);
         expect(loc.protocol).to.eq('http:');
-        expect(loc.toString()).to.eq('http://localhost:3000/heroes');
+        expect(loc.toString()).to.eq(`${url}/heroes`);
       });
       detailsAreVisible(false);
       containsHeroes(heroCount);
     });
-
   });
 });

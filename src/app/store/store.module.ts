@@ -11,7 +11,7 @@ import { environment } from '../../environments/environment';
 import { entityConfig } from './entity-metadata';
 import {
   defaultDataServiceConfig,
-  entityDispatcherDefaultOptions
+  // entityDispatcherDefaultOptions
 } from './config';
 
 @NgModule({
@@ -23,10 +23,10 @@ import {
   ],
   providers: [
     { provide: DefaultDataServiceConfig, useValue: defaultDataServiceConfig },
-    {
-      provide: EntityDispatcherDefaultOptions,
-      useValue: entityDispatcherDefaultOptions
-    }
+    // {
+    //   provide: EntityDispatcherDefaultOptions,
+    //   useValue: entityDispatcherDefaultOptions
+    // }
   ]
 })
 export class AppStoreModule {}

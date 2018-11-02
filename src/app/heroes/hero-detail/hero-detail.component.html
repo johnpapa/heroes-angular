@@ -8,22 +8,22 @@
   <div class="card-content">
     <div class="content">
       <div class="field" *ngIf="editingHero.id">
-        <label class="label" htmlFor="id">
+        <label class="label" for="id">
           id
         </label>
-        <input [name]="editingHero.id" class="input" type="text" [(ngModel)]="editingHero.id" placeholder="e.g. HeroColleen" readOnly />
+        <input name="id" class="input" type="text" [(ngModel)]="editingHero.id" placeholder="e.g. HeroColleen" readOnly />
       </div>
       <div class="field">
-        <label class="label" htmlFor="name">
+        <label class="label" for="name">
           name
         </label>
-        <input [name]="editingHero.name" class="input" type="text" [(ngModel)]="editingHero.name" placeholder="e.g. Colleen" />
+        <input name="name" class="input" type="text" [(ngModel)]="editingHero.name" placeholder="e.g. Colleen" />
       </div>
       <div class="field">
-        <label class="label" htmlFor="description">
+        <label class="label" for="description">
           description
         </label>
-        <input [name]="editingHero.description" class="input" type="text" [(ngModel)]="editingHero.description" placeholder="dance fight!" />
+        <input name="description" class="input" type="text" [(ngModel)]="editingHero.description" placeholder="dance fight!" />
       </div>
     </div>
   </div>
