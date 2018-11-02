@@ -101,26 +101,28 @@ header {
 }
 ul.list {
   box-shadow: none;
-  .card-content {
-    background-color: $shade-light;
-    .name {
-      font-size: 28px;
-      color: #000;
-    }
-    .description {
-      font-size: 20px;
-      color: #999;
-    }
-    background-color: $shade-light;
-  }
-  .card {
-    margin-bottom: 2em;
-  }
-  .label {
-    font-weight: normal;
-  }
 }
-.card-header-title {
+div.card-content {
+  background-color: $shade-light;
+  .name {
+    font-size: 28px;
+    color: #000;
+  }
+  .description {
+    font-size: 20px;
+    color: #999;
+  }
+  background-color: $shade-light;
+}
+.card {
+  margin-bottom: 2em;
+}
+
+label.label {
+  font-weight: normal;
+}
+
+p.card-header-title {
   background-color: $primary;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -166,4 +168,8 @@ ul.list {
 #modal .buttons button {
   display: inline-block;
   margin: auto;
+}
+
+.field {
+  margin-bottom: 0.75rem;
 }

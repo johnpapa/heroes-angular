@@ -1,3 +1,36 @@
-<p>
-  hero-detail works!
-</p>
+<div class="card edit-detail">
+  <header class="card-header">
+    <p class="card-header-title">
+      {{editingHero.name}}
+      &nbsp;
+    </p>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      <div class="field" *ngIf="editingHero.id">
+        <label class="label" htmlFor="id">
+          id
+        </label>
+        <input [name]="editingHero.id" class="input" type="text" [(ngModel)]="editingHero.id" placeholder="e.g. HeroColleen" readOnly />
+      </div>
+      <div class="field">
+        <label class="label" htmlFor="name">
+          name
+        </label>
+        <input [name]="editingHero.name" class="input" type="text" [(ngModel)]="editingHero.name" placeholder="e.g. Colleen" />
+      </div>
+      <div class="field">
+        <label class="label" htmlFor="description">
+          description
+        </label>
+        <input [name]="editingHero.description" class="input" type="text" [(ngModel)]="editingHero.description" placeholder="dance fight!" />
+      </div>
+    </div>
+  </div>
+  <footer class="card-footer ">
+    <app-button-footer class="card-footer-item" [className]="'cancel-button'" [iconClasses]="'fas fa-undo'" (clicked)="clear($event)"
+      label="Cancel" [item]="editingHero"></app-button-footer>
+    <app-button-footer class="card-footer-item" [className]="'save-button'" [iconClasses]="'fas fa-save'" (clicked)="saveHero($event)"
+      label="Save" [item]="editingHero"></app-button-footer>
+  </footer>
+</div>

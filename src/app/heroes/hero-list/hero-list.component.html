@@ -7,21 +7,16 @@
         <app-button-footer class="card-footer-item"
           [className]="'delete-item'"
           [iconClasses]="'fas fa-trash'"
-
+          (clicked)="deleteHero($event)"
           label="Delete"
-          [dataIndex]="i"
-          [dataId]="hero.id"></app-button-footer>
+          [item]="hero"></app-button-footer>
         <app-button-footer class="card-footer-item"
           [className]="'edit-item'"
           [iconClasses]="'fas fa-edit'"
-
+          (clicked)="selectHero($event)"
           label="Edit"
-          [dataIndex]="i"
-          [dataId]="hero.id"></app-button-footer>
+          [item]="hero"></app-button-footer>
       </footer>
     </div>
   </li>
 </ul>
-
-<!-- onClick={this.selectHero} -->
-<!-- onClick={this.deleteHero} -->

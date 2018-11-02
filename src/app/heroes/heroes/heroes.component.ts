@@ -17,6 +17,11 @@ export class HeroesComponent implements OnInit {
 
   ngOnInit() {
     this.getHeroes();
+
+    // TODO: select for now so i can style this
+    this.heroes$.subscribe(h => {
+      // this.selected = h[0];
+    });
   }
 
   add(hero: Hero) {
@@ -43,6 +48,15 @@ export class HeroesComponent implements OnInit {
   getHeroes() {
     this.heroService.getAll();
     this.close();
+  }
+
+  save(hero: Hero) {
+    if (this.selected && this.selected.name) {
+      hero.id = `Hero${hero.name}`; // Making our own key - or we could config ngrxdata to let it pass to db
+      this.update(hero);
+    } else {
+      this.add(hero);
+    }
   }
 
   select(hero: Hero) {

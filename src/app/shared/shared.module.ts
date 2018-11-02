@@ -8,8 +8,8 @@ import { ButtonFooterComponent } from './button-footer.component';
 @NgModule({
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
   declarations: [
-    CardContentComponent,
     ButtonFooterComponent,
+    CardContentComponent,
     ListHeaderComponent
   ],
   exports: [

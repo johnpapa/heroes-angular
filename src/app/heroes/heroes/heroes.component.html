@@ -1,12 +1,12 @@
 <div class="content-container">
-  <!-- <ListHeader title="Heroes" handleAdd={this.addHero} handleRefresh={getHeroes} routePath="/heroes" /> -->
-  <app-list-header title="Heroes"></app-list-header>
+  <app-list-header title="Heroes" (add)="enableAddMode()" (refresh)="getHeroes()"></app-list-header>
   <div class="columns is-multiline is-variable">
-    <div class="column is-6">
-      <div *ngIf="heroes$ | async as heroes">
-        <app-hero-list [heroes]="heroes" (selectedHero)="selected" (handleSelectHero)="select($event)"
-          (handleDeleteHero)="delete($event)"></app-hero-list>
-        )}
+    <div class="column is-6" *ngIf="heroes$ | async as heroes">
+      <div *ngIf="!selected">
+        <app-hero-list [heroes]="heroes" [selectedHero]="selected" (selected)="select($event)" (deleted)="delete($event)"></app-hero-list>
+      </div>
+      <div *ngIf="selected">
+        <app-hero-detail [hero]="selected" (unselect)="clear()" (save)="save($event)"></app-hero-detail>
       </div>
       <!-- <router-outlet></router-outlet> -->
       <!-- <Switch>

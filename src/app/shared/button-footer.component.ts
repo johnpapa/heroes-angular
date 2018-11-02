@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Hero } from '../core';
 
 @Component({
   selector: 'app-button-footer',
@@ -9,8 +10,6 @@ import { Component, OnInit, Input } from '@angular/core';
       role="button"
       tabIndex="0"
       (click)="handleClick()"
-      [attr.data-index]="dataIndex"
-      [attr.data-id]="dataId"
     >
       <i [ngClass]="iconClasses"></i>
       <span>{{label}}</span>
@@ -25,13 +24,16 @@ export class ButtonFooterComponent implements OnInit {
   @Input()
   iconClasses;
   @Input()
-  dataIndex;
-  @Input()
-  dataId;
+  item;
+
+  @Output()
+  clicked = new EventEmitter<any>();
 
   constructor() {}
 
   ngOnInit() {}
 
-  handleClick() {}
+  handleClick() {
+    this.clicked.emit(this.item);
+  }
 }

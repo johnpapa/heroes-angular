@@ -1,11 +1,9 @@
 import {
   Component,
   Input,
-  ElementRef,
   EventEmitter,
   OnChanges,
   Output,
-  ViewChild,
   SimpleChanges
 } from '@angular/core';
 
@@ -21,18 +19,12 @@ export class HeroDetailComponent implements OnChanges {
   @Output()
   unselect = new EventEmitter<string>();
   @Output()
-  add = new EventEmitter<Hero>();
-  @Output()
-  update = new EventEmitter<Hero>();
-
-  @ViewChild('name')
-  nameElement: ElementRef;
+  save = new EventEmitter<Hero>();
 
   addMode = false;
   editingHero: Hero;
 
   ngOnChanges(changes: SimpleChanges) {
-    this.setFocus();
     if (this.hero && this.hero.id) {
       this.editingHero = { ...this.hero };
       this.addMode = false;
@@ -42,29 +34,12 @@ export class HeroDetailComponent implements OnChanges {
     }
   }
 
-  addHero() {
-    this.add.emit(this.editingHero);
-    this.clear();
-  }
-
   clear() {
     this.unselect.emit();
   }
 
   saveHero() {
-    if (this.addMode) {
-      this.addHero();
-    } else {
-      this.updateHero();
-    }
-  }
-
-  setFocus() {
-    this.nameElement.nativeElement.focus();
-  }
-
-  updateHero() {
-    this.update.emit(this.editingHero);
+    this.save.emit(this.editingHero);
     this.clear();
   }
 }
