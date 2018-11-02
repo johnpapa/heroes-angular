@@ -1,4 +1,7 @@
-import { DefaultDataServiceConfig } from 'ngrx-data';
+import {
+  DefaultDataServiceConfig,
+  EntityDispatcherDefaultOptions
+} from 'ngrx-data';
 
 export const defaultDataServiceConfig: DefaultDataServiceConfig = {
   root: 'api', // default root path to the server's web api
@@ -12,4 +15,12 @@ export const defaultDataServiceConfig: DefaultDataServiceConfig = {
       collectionResourceUrl: 'api/heroes/'
     }
   }
+};
+
+export const entityDispatcherDefaultOptions: EntityDispatcherDefaultOptions = {
+  optimisticAdd: false,
+  optimisticDelete: false,
+  optimisticUpdate: false,
+  optimisticUpsert: false,
+  optimisticSaveEntities: false
 };
