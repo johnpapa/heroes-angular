@@ -10,22 +10,30 @@ import { HeroService } from '../hero.service';
 export class HeroesComponent implements OnInit {
   selected: Hero;
   heroes$: Observable<Hero[]>;
+  message = '?';
+  heroToDelete: Hero;
+  showModal = false;
 
-  constructor(private heroService: HeroService) {
+  constructor(
+    private heroService: HeroService // , private modalService: ModalService
+  ) {
     this.heroes$ = heroService.entities$;
   }
 
   ngOnInit() {
     this.getHeroes();
-
-    // TODO: select for now so i can style this
-    this.heroes$.subscribe(h => {
-      // this.selected = h[0];
-    });
   }
 
   add(hero: Hero) {
     this.heroService.add(hero);
+  }
+
+  askToDelete(hero: Hero) {
+    this.heroToDelete = hero;
+    this.showModal = true;
+    if (this.heroToDelete.name) {
+      this.message = `Would you like to delete ${this.heroToDelete.name}?`;
+    }
   }
 
   clear() {
@@ -36,8 +44,17 @@ export class HeroesComponent implements OnInit {
     this.selected = null;
   }
 
-  delete(hero: Hero) {
-    this.heroService.delete(hero.id);
+  closeModal() {
+    this.showModal = false;
+  }
+
+  deleteHero() {
+    this.showModal = false;
+    if (this.heroToDelete) {
+      this.heroService
+        .delete(this.heroToDelete.id)
+        .subscribe(() => (this.heroToDelete = null));
+    }
     this.close();
   }
 

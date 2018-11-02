@@ -50,8 +50,7 @@ context('Heroes', () => {
   specify(`Deletes ${heroToDelete.name}`, () => {
     cy.get(`.list .delete-item[data-id=${heroToDelete.id}]`).click();
 
-    // TODO: put back when we get a modal
-    // cy.get(`#modal [data-modal-response=yes]`).click();
+    cy.get(`.modal-hero .modal-yes`).click();
 
     containsHeroes(heroCount - 1);
     cy.get(`.list .delete-item[data-id=${heroToDelete.id}]`).should(

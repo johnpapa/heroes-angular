@@ -15,7 +15,16 @@ import { SharedModule } from '../shared/shared.module';
     RouterModule, // because we use <router-outlet> and routerLink
     SharedModule
   ],
-  exports: [FontAwesomeModule, NavComponent, HeaderComponent],
-  declarations: [NavComponent, HeaderComponent, NotFoundComponent]
+  exports: [
+    NavComponent,
+    HeaderComponent,
+    NotFoundComponent,
+    FontAwesomeModule
+  ],
+  declarations: [
+    NavComponent,
+    HeaderComponent,
+    NotFoundComponent,
+  ]
 })
 export class CoreModule {}
