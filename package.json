@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "quick": "concurrently \"npm run backend\" \"npm start\"",
     "cypress": "npx cypress open",
-    "backend": "json-server --watch db.json --routes routes.json --port 8626 --middlewares ./node_modules/json-server-reset"
+    "backend": "json-server --watch db.json --routes routes.json --port 7626 --middlewares ./node_modules/json-server-reset"
   },
   "private": true,
   "dependencies": {
