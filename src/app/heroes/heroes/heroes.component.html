@@ -8,21 +8,6 @@
       <div *ngIf="selected">
         <app-hero-detail [hero]="selected" (unselect)="clear()" (save)="save($event)"></app-hero-detail>
       </div>
-      <!-- <router-outlet></router-outlet> -->
-      <!-- <Switch>
-        <Route exact path="/heroes" component={()=> (
-          <HeroList heroes={heroes} selectedHero={selectedHero} handleSelectHero={this.handleSelectHero}
-            handleDeleteHero={this.handleDeleteHero} />
-          )}
-          />
-          <Route exact path="/heroes/:id" component={()=> {
-            return (
-            <HeroDetail hero={selectedHero} handleCancelHero={this.handleCancelHero} handleSaveHero={this.handleSaveHero}
-              key={selectedHero && selectedHero.id} />
-            );
-            }}
-            />
-      </Switch> -->
     </div>
   </div>
 
