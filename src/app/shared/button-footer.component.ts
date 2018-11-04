@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { Hero } from '../core';
 
 @Component({
   selector: 'app-button-footer',
