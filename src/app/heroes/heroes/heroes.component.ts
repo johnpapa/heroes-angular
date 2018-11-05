@@ -40,22 +40,18 @@ export class HeroesComponent implements OnInit {
     this.selected = null;
   }
 
-  close() {
-    this.selected = null;
-  }
-
   closeModal() {
     this.showModal = false;
   }
 
   deleteHero() {
-    this.showModal = false;
+    this.closeModal();
     if (this.heroToDelete) {
       this.heroService
         .delete(this.heroToDelete.id)
         .subscribe(() => (this.heroToDelete = null));
     }
-    this.close();
+    this.clear();
   }
 
   enableAddMode() {
@@ -64,7 +60,7 @@ export class HeroesComponent implements OnInit {
 
   getHeroes() {
     this.heroService.getAll();
-    this.close();
+    this.clear();
   }
 
   save(hero: Hero) {
