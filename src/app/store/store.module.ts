@@ -2,17 +2,10 @@ import { NgModule } from '@angular/core';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import {
-  NgrxDataModule,
-  DefaultDataServiceConfig,
-  EntityDispatcherDefaultOptions
-} from 'ngrx-data';
+import { DefaultDataServiceConfig, NgrxDataModule } from 'ngrx-data';
 import { environment } from '../../environments/environment';
+import { defaultDataServiceConfig } from './config';
 import { entityConfig } from './entity-metadata';
-import {
-  defaultDataServiceConfig,
-  // entityDispatcherDefaultOptions
-} from './config';
 
 @NgModule({
   imports: [
@@ -22,11 +15,7 @@ import {
     NgrxDataModule.forRoot(entityConfig)
   ],
   providers: [
-    { provide: DefaultDataServiceConfig, useValue: defaultDataServiceConfig },
-    // {
-    //   provide: EntityDispatcherDefaultOptions,
-    //   useValue: entityDispatcherDefaultOptions
-    // }
+    { provide: DefaultDataServiceConfig, useValue: defaultDataServiceConfig }
   ]
 })
 export class AppStoreModule {}

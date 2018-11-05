@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './core';
 
 const routes: Routes = [
@@ -8,10 +8,10 @@ const routes: Routes = [
     path: 'heroes',
     loadChildren: './heroes/heroes.module#HeroesModule'
   },
-  // {
-  //   path: 'villains',
-  //   loadChildren: 'app/villains/villains.module#VillainsModule',
-  // },
+  {
+    path: 'villains',
+    loadChildren: './villains/villains.module#VillainsModule',
+  },
   { path: '**', component: NotFoundComponent }
 ];
 

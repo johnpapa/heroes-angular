@@ -1,0 +1,22 @@
+<ul class="list">
+  <li role="presentation" *ngFor="let villain of villains; trackBy:byId; let i=index">
+    <div class="card">
+      <app-card-content
+      [name]="villain.name" [description]="villain.description"></app-card-content>
+      <footer class="card-footer">
+        <app-button-footer class="card-footer-item"
+          [className]="'delete-item'"
+          [iconClasses]="'fas fa-trash'"
+          (clicked)="deleteVillain($event)"
+          label="Delete"
+          [item]="villain"></app-button-footer>
+        <app-button-footer class="card-footer-item"
+          [className]="'edit-item'"
+          [iconClasses]="'fas fa-edit'"
+          (clicked)="selectVillain($event)"
+          label="Edit"
+          [item]="villain"></app-button-footer>
+      </footer>
+    </div>
+  </li>
+</ul>

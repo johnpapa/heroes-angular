@@ -1,7 +1,4 @@
-import {
-  DefaultDataServiceConfig,
-  EntityDispatcherDefaultOptions
-} from 'ngrx-data';
+import { DefaultDataServiceConfig } from 'ngrx-data';
 
 export const defaultDataServiceConfig: DefaultDataServiceConfig = {
   root: 'api', // default root path to the server's web api
@@ -13,6 +10,10 @@ export const defaultDataServiceConfig: DefaultDataServiceConfig = {
       // You must specify the root as part of the resource URL.
       entityResourceUrl: 'api/heroes/',
       collectionResourceUrl: 'api/heroes/'
+    },
+    Villain: {
+      entityResourceUrl: 'api/villains/',
+      collectionResourceUrl: 'api/villains/'
     }
   }
 };
