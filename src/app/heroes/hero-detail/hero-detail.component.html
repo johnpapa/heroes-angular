@@ -28,9 +28,9 @@
     </div>
   </div>
   <footer class="card-footer ">
-    <app-button-footer class="card-footer-item" [className]="'cancel-button'" [iconClasses]="'fas fa-undo'" (clicked)="clear($event)"
+    <app-button-footer class="card-footer-item" [className]="'cancel-button'" [iconClasses]="'fas fa-undo'" (clicked)="clear()"
       label="Cancel" [item]="editingHero"></app-button-footer>
-    <app-button-footer class="card-footer-item" [className]="'save-button'" [iconClasses]="'fas fa-save'" (clicked)="saveHero($event)"
+    <app-button-footer class="card-footer-item" [className]="'save-button'" [iconClasses]="'fas fa-save'" (clicked)="saveHero()"
       label="Save" [item]="editingHero"></app-button-footer>
   </footer>
 </div>
