@@ -2,12 +2,9 @@
   <app-list-header title="Heroes" (add)="enableAddMode()" (refresh)="getHeroes()"></app-list-header>
   <div class="columns is-multiline is-variable">
     <div class="column is-8" *ngIf="heroes$ | async as heroes">
-      <div *ngIf="!selected">
-        <app-hero-list [heroes]="heroes" [selectedHero]="selected" (selected)="select($event)" (deleted)="askToDelete($event)"></app-hero-list>
-      </div>
-      <div *ngIf="selected">
-        <app-hero-detail [hero]="selected" (unselect)="clear()" (save)="save($event)"></app-hero-detail>
-      </div>
+      <app-hero-list *ngIf="!selected" [heroes]="heroes" [selectedHero]="selected" (selected)="select($event)"
+        (deleted)="askToDelete($event)"></app-hero-list>
+      <app-hero-detail *ngIf="selected" [hero]="selected" (unselect)="clear()" (save)="save($event)"></app-hero-detail>
     </div>
   </div>
 

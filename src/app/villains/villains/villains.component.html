@@ -2,12 +2,9 @@
   <app-list-header title="Villains" (add)="enableAddMode()" (refresh)="getVillains()"></app-list-header>
   <div class="columns is-multiline is-variable">
     <div class="column is-8" *ngIf="villains$ | async as villains">
-      <div *ngIf="!selected">
-        <app-villain-list [villains]="villains" [selectedVillain]="selected" (selected)="select($event)" (deleted)="askToDelete($event)"></app-villain-list>
-      </div>
-      <div *ngIf="selected">
-        <app-villain-detail [villain]="selected" (unselect)="clear()" (save)="save($event)"></app-villain-detail>
-      </div>
+      <app-villain-list *ngIf="!selected" [villains]="villains" [selectedVillain]="selected" (selected)="select($event)"
+        (deleted)="askToDelete($event)"></app-villain-list>
+      <app-villain-detail *ngIf="selected" [villain]="selected" (unselect)="clear()" (save)="save($event)"></app-villain-detail>
     </div>
   </div>
 
