@@ -45,3 +45,11 @@ These apps contain:
 ## Problems or Suggestions
 
 [Open an issue here](https://github.com/johnpapa/heroes-angular/issues)
+
+## Thanks
+
+Thank you to [Sarah Drasner](https://twitter.com/), [Brian Holt](https://twitter.com/), [Chris Noring](https://twitter.com/), [Craig Shoemaker](https://twitter.com/), and [Ward Bell](https://twitter.com/wardbell) for reviewing the code in the three repos for the Angular, React, and Vue apps:
+
+- [heroes-angular](https://github.com/johnpapa/heroes-angular)
+- [heroes-react](https://github.com/johnpapa/heroes-react)
+- [heroes-vue](https://github.com/johnpapa/heroes-vue)
