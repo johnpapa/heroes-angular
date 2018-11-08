@@ -10,7 +10,7 @@ const heroToDelete = data.heroes[5];
 const newHero = {
   id: 'heroMadelyn',
   name: 'Madelyn',
-  description: 'chief of theatre props'
+  description: 'the cat whisperer'
 };
 
 const port = Cypress.env('port');
