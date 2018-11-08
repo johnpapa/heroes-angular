@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.conf.json --open",
+    "start-ng": "ng serve --proxy-config proxy.conf.json --open",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -34,6 +35,7 @@
     "angular-font-awesome": "^3.1.2",
     "bulma": "^0.7.2",
     "core-js": "^2.5.4",
+    "express": "^4.16.4",
     "font-awesome": "^4.7.0",
     "ngrx-data": "^6.1.0-beta.2",
     "rxjs": "~6.3.3",

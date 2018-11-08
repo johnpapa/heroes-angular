@@ -1,12 +1,11 @@
 import { DefaultDataServiceConfig } from 'ngrx-data';
 
-const root = 'http://localhost:7777/api';
+const root = 'https://papa-heroes-node-api.azurewebsites.net/api';
+
 export const defaultDataServiceConfig: DefaultDataServiceConfig = {
   root, // default root path to the server's web api
 
-  // Optionally specify resource URLS for HTTP calls
   entityHttpResourceUrls: {
-    // Case matters. Match the case of the entity name.
     Hero: {
       // You must specify the root as part of the resource URL.
       entityResourceUrl: `${root}/heroes/`,
@@ -18,11 +17,3 @@ export const defaultDataServiceConfig: DefaultDataServiceConfig = {
     }
   }
 };
-
-// export const entityDispatcherDefaultOptions: EntityDispatcherDefaultOptions = {
-//   optimisticAdd: false,
-//   optimisticDelete: false,
-//   optimisticUpdate: false,
-//   optimisticUpsert: false,
-//   optimisticSaveEntities: false
-// };
