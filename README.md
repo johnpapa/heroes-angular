@@ -53,3 +53,12 @@ Thank you to [Sarah Drasner](https://twitter.com/), [Brian Holt](https://twitter
 - [heroes-angular](https://github.com/johnpapa/heroes-angular)
 - [heroes-react](https://github.com/johnpapa/heroes-react)
 - [heroes-vue](https://github.com/johnpapa/heroes-vue)
+
+## Resource
+
+- [VS Code](https://aka.ms/codeit)
+- [Azure Free Trial](https://aka.ms/jp-free)
+- [VS Code Extension for Node on Azure](https://aka.ms/vsc-node)
+- [VS Code Extension Marketplace](https://aka.ms/jp-codeext)
+- [VS Code - macOS keys](https://aka.ms/jp-code-mackeys)
+- [VS Code - Windows keys](https://aka.ms/jp-code-winkeys)
