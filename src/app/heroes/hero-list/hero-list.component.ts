@@ -6,23 +6,10 @@ import { Hero } from '../../core';
   templateUrl: './hero-list.component.html'
 })
 export class HeroListComponent {
-  @Input()
-  heroes: Hero[];
-
-  @Input()
-  selectedHero: Hero;
-
-  @Output()
-  deleted = new EventEmitter<Hero>();
-
-  @Output()
-  selected = new EventEmitter<Hero>();
-
-  constructor() {}
-
-  byId(hero: Hero) {
-    return hero.id;
-  }
+  @Input() heroes: Hero[];
+  @Input() selectedHero: Hero;
+  @Output() deleted = new EventEmitter<Hero>();
+  @Output() selected = new EventEmitter<Hero>();
 
   selectHero(hero: Hero) {
     this.selected.emit(hero);
@@ -30,5 +17,9 @@ export class HeroListComponent {
 
   deleteHero(hero: Hero) {
     this.deleted.emit(hero);
+  }
+
+  byId(hero: Hero) {
+    return hero.id;
   }
 }
