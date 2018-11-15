@@ -12,4 +12,4 @@ const start = () => {
   app.listen(port, () => console.log(`listening on http://localhost:${port}`));
 };
 
-module.exports.start = start;
+start();

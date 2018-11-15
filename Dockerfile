@@ -10,14 +10,16 @@ RUN npx ng build --prod
 # Node server
 FROM node:10.13-alpine as node-server
 WORKDIR /usr/src/app
-COPY server/package.json ./
+COPY ["package.json", "npm-shrinkwrap.json*", "./"]
 RUN npm install --production --silent && mv node_modules ../
-COPY server/ ./
+COPY server.js .
 
 # Final image
 FROM node:10.13-alpine
 WORKDIR /usr/src/app
+# get the node_modules
 COPY --from=node-server /usr/src /usr/src
+# get the client app
 COPY --from=client-app /usr/src/app/dist/heroes-angular ./
 EXPOSE 9626
 CMD ["npm", "start"]
