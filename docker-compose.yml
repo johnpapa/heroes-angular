@@ -6,5 +6,6 @@ services:
     build: .
     environment:
       NODE_ENV: production
+      PUBLIC_WEB: ./public
     ports:
       - 9626:9626

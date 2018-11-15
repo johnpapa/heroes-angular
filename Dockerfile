@@ -20,6 +20,6 @@ WORKDIR /usr/src/app
 # get the node_modules
 COPY --from=node-server /usr/src /usr/src
 # get the client app
-COPY --from=client-app /usr/src/app/dist/heroes-angular ./
+COPY --from=client-app /usr/src/app/dist/heroes-angular ./public
 EXPOSE 9626
-CMD ["npm", "start"]
+CMD ["node", "server.js"]
