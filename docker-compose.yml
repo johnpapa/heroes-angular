@@ -8,4 +8,4 @@ services:
       NODE_ENV: production
       PUBLIC_WEB: ./public
     ports:
-      - 9626:9626
+      - 7626:7626

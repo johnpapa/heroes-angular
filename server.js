@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 9626;
+const port = process.env.PORT || 7626;
 const publicweb = process.env.PUBLICWEB || './public';
 
 const captains = console;
