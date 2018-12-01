@@ -1,0 +1,13 @@
+version: '2.1'
+
+services:
+  heroes-angular:
+    image: heroes-angular
+    build: .
+    environment:
+      NODE_ENV: development
+      PUBLIC_WEB: ./public
+    ports:
+      - 7626:7626
+      - 9229:9229
+    command: node --inspect=0.0.0.0:9229 server.js

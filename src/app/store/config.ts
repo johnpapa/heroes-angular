@@ -1,7 +1,7 @@
 import { DefaultDataServiceConfig } from 'ngrx-data';
+import { environment } from './../../environments/environment';
 
-// const root = 'https://papa-heroes-node-api.azurewebsites.net/api';
-const root = 'api';
+const root = environment.API;
 
 export const defaultDataServiceConfig: DefaultDataServiceConfig = {
   root, // default root path to the server's web api

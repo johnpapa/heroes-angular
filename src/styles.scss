@@ -131,7 +131,8 @@ p.card-header-title {
   display: block;
   padding-left: 24px;
 }
-.card-footer a {
+.card-footer button {
+  font-size: 16px;
   i {
     margin-right: 10px;
   }
@@ -146,10 +147,21 @@ p.card-header-title {
   width: 80px;
 }
 
-.modal-card-head, .modal-card-body {
+.modal-card-head,
+.modal-card-body {
   text-align: center;
 }
 
 .field {
   margin-bottom: 0.75rem;
+}
+
+.navbar-burger {
+  margin-left: auto;
+}
+
+button.link {
+  background: none;
+  border: none;
+  cursor: pointer;
 }

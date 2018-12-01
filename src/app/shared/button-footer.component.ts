@@ -3,17 +3,16 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 @Component({
   selector: 'app-button-footer',
   template: `
-    <a
+    <button
+      class="link"
       [ngClass]="className"
       [attr.aria-label]="label"
-      role="button"
-      tabIndex="0"
+      tabindex="0"
       [attr.data-id]="item.id"
       (click)="handleClick()"
     >
-      <i [ngClass]="iconClasses"></i>
-      <span>{{label}}</span>
-    </a>
+      <i [ngClass]="iconClasses"></i> <span>{{ label }}</span>
+    </button>
   `
 })
 export class ButtonFooterComponent implements OnInit {

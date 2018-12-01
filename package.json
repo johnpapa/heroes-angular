@@ -8,10 +8,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
     "quick": "concurrently \"npm run backend\" \"npm run start-ng\"",
     "cypress": "npx cypress open",
-    "backend": "json-server --watch db.json --routes routes.json --port 7626 --middlewares ./node_modules/json-server-reset"
+    "e2e": "concurrently \"npm run quick\" \"npm run cypress\"",
+    "backend": "json-server --watch db.json --routes routes.json --port 7627 --middlewares ./node_modules/json-server-reset"
   },
   "private": true,
   "dependencies": {

@@ -1,0 +1,11 @@
+version: '2.1'
+
+services:
+  heroes-angular:
+    image: heroes-angular
+    build: .
+    environment:
+      NODE_ENV: production
+      PUBLIC_WEB: ./public
+    ports:
+      - 7626:7626
