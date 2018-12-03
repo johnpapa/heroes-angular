@@ -1,24 +1,16 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ChangeDetectionStrategy } from '@angular/core';
 import { Villain } from '../../core';
 
 @Component({
   selector: 'app-villain-list',
-  templateUrl: './villain-list.component.html'
+  templateUrl: './villain-list.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class VillainListComponent {
-  @Input()
-  villains: Villain[];
-
-  @Input()
-  selectedVillain: Villain;
-
-  @Output()
-  deleted = new EventEmitter<Villain>();
-
-  @Output()
-  selected = new EventEmitter<Villain>();
-
-  constructor() {}
+  @Input() villains: Villain[];
+  @Input() selectedVillain: Villain;
+  @Output() deleted = new EventEmitter<Villain>();
+  @Output() selected = new EventEmitter<Villain>();
 
   byId(villain: Villain) {
     return villain.id;
