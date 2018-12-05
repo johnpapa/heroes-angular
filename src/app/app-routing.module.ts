@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './core';
+import { AboutComponent } from './about.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'heroes' },
@@ -10,8 +11,9 @@ const routes: Routes = [
   },
   {
     path: 'villains',
-    loadChildren: './villains/villains.module#VillainsModule',
+    loadChildren: './villains/villains.module#VillainsModule'
   },
+  { path: 'about', component: AboutComponent },
   { path: '**', component: NotFoundComponent }
 ];
 
