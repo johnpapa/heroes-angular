@@ -23,15 +23,9 @@ import { Hero } from '../core';
 })
 export class ModalComponent implements OnInit {
   @Input() message;
-
   @Input() isOpen = false;
-
-  @Output()
-  handleYes = new EventEmitter();
-  @Output()
-  handleNo = new EventEmitter();
-
-  constructor() {}
+  @Output() handleYes = new EventEmitter();
+  @Output() handleNo = new EventEmitter();
 
   ngOnInit() {}
 

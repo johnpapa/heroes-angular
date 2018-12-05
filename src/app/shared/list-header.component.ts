@@ -25,16 +25,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   `
 })
 export class ListHeaderComponent implements OnInit {
-  @Input()
-  title: string;
-
-  @Output()
-  add = new EventEmitter();
-
-  @Output()
-  refresh = new EventEmitter();
-
-  constructor() {}
+  @Input() title: string;
+  @Output() add = new EventEmitter();
+  @Output() refresh = new EventEmitter();
 
   ngOnInit() {}
 
