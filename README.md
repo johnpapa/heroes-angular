@@ -87,15 +87,15 @@ Thank you to [Sarah Drasner](https://twitter.com/), [Brian Holt](https://twitter
 
 ## Resources
 
-- [VS Code](https://code.visualstudio.com?wt.mc_id=github-oss-jopapa)
-- [Azure Free Trial](https://azure.microsoft.com/en-us/free/?wt.mc_id=github-oss-jopapa)
-- [VS Code Extension for Node on Azure](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack&WT.mc_id=github-oss-jopapa)
-- [VS Code Extension Marketplace](https://marketplace.visualstudio.com/vscode?wt.mc_id=github-oss-jopapa)
-- [VS Code - macOS keys](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf?WT.mc_id=github-oss-jopapa)
-- [VS Code - Windows keys](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf?WT.mc_id=github-oss-jopapa)
+- [VS Code](https://code.visualstudio.com?wt.mc_id=heroesangular-github-jopapa)
+- [Azure Free Trial](https://azure.microsoft.com/en-us/free/?wt.mc_id=heroesangular-github-jopapa)
+- [VS Code Extension for Node on Azure](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack&WT.mc_id=heroesangular-github-jopapa)
+- [VS Code Extension Marketplace](https://marketplace.visualstudio.com/vscode?wt.mc_id=heroesangular-github-jopapa)
+- [VS Code - macOS keys](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf?WT.mc_id=heroesangular-github-jopapa)
+- [VS Code - Windows keys](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf?WT.mc_id=heroesangular-github-jopapa)
 
 ### Debugging Resources
 
-- [Debugging Angular in VS Code](https://code.visualstudio.com/docs/nodejs/angular-tutorial?wt.mc_id=github-oss-jopapa)
-- [Debugging React in VS Code](https://code.visualstudio.com/docs/nodejs/reactjs-tutorial?wt.mc_id=github-oss-jopapa)
-- [Debugging Vue in VS Code](https://code.visualstudio.com/docs/nodejs/vuejs-tutorial?wt.mc_id=github-oss-jopapa)
+- [Debugging Angular in VS Code](https://code.visualstudio.com/docs/nodejs/angular-tutorial?wt.mc_id=heroesangular-github-jopapa)
+- [Debugging React in VS Code](https://code.visualstudio.com/docs/nodejs/reactjs-tutorial?wt.mc_id=heroesangular-github-jopapa)
+- [Debugging Vue in VS Code](https://code.visualstudio.com/docs/nodejs/vuejs-tutorial?wt.mc_id=heroesangular-github-jopapa)
