@@ -87,9 +87,9 @@ Thank you to [Sarah Drasner](https://twitter.com/), [Brian Holt](https://twitter
 
 ## Resources
 
-- [VS Code](https://aka.ms/codeit)
-- [Azure Free Trial](https://aka.ms/jp-free)
-- [VS Code Extension for Node on Azure](https://aka.ms/vsc-node)
-- [VS Code Extension Marketplace](https://aka.ms/jp-codeext)
-- [VS Code - macOS keys](https://aka.ms/jp-code-mackeys)
-- [VS Code - Windows keys](https://aka.ms/jp-code-winkeys)
+- [VS Code](https://code.visualstudio.com?wt.mc_id=github-oss-jopapa)
+- [Azure Free Trial](https://azure.microsoft.com/en-us/free/?wt.mc_id=github-oss-jopapa)
+- [VS Code Extension for Node on Azure](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack&WT.mc_id=github-oss-jopapa)
+- [VS Code Extension Marketplace](https://marketplace.visualstudio.com/vscode?wt.mc_id=github-oss-jopapa)
+- [VS Code - macOS keys](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf?WT.mc_id=github-oss-jopapa)
+- [VS Code - Windows keys](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf?WT.mc_id=github-oss-jopapa)
