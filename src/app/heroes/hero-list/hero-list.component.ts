@@ -6,19 +6,10 @@ import { Hero } from '../../core';
   templateUrl: './hero-list.component.html'
 })
 export class HeroListComponent {
-  @Input()
-  heroes: Hero[];
-
-  @Input()
-  selectedHero: Hero;
-
-  @Output()
-  deleted = new EventEmitter<Hero>();
-
-  @Output()
-  selected = new EventEmitter<Hero>();
-
-  constructor() {}
+  @Input() heroes: Hero[];
+  @Input() selectedHero: Hero;
+  @Output() deleted = new EventEmitter<Hero>();
+  @Output() selected = new EventEmitter<Hero>();
 
   byId(hero: Hero) {
     return hero.id;
