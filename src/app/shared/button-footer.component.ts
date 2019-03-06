@@ -22,10 +22,7 @@ export class ButtonFooterComponent implements OnInit {
   @Input() item;
   @Input() dataId;
 
-  @Output()
-  clicked = new EventEmitter<any>();
-
-  constructor() {}
+  @Output() clicked = new EventEmitter<any>();
 
   ngOnInit() {}
 

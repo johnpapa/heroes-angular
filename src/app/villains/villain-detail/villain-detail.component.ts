@@ -4,22 +4,21 @@ import {
   EventEmitter,
   OnChanges,
   Output,
-  SimpleChanges
+  SimpleChanges,
+  ChangeDetectionStrategy
 } from '@angular/core';
 
 import { Villain } from '../../core';
 
 @Component({
   selector: 'app-villain-detail',
-  templateUrl: './villain-detail.component.html'
+  templateUrl: './villain-detail.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class VillainDetailComponent implements OnChanges {
-  @Input()
-  villain: Villain;
-  @Output()
-  unselect = new EventEmitter<string>();
-  @Output()
-  save = new EventEmitter<Villain>();
+  @Input() villain: Villain;
+  @Output() unselect = new EventEmitter<string>();
+  @Output() save = new EventEmitter<Villain>();
 
   addMode = false;
   editingVillain: Villain;

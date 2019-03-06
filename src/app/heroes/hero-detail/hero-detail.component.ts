@@ -4,22 +4,21 @@ import {
   EventEmitter,
   OnChanges,
   Output,
-  SimpleChanges
+  SimpleChanges,
+  ChangeDetectionStrategy
 } from '@angular/core';
 
 import { Hero } from '../../core';
 
 @Component({
   selector: 'app-hero-detail',
-  templateUrl: './hero-detail.component.html'
+  templateUrl: './hero-detail.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeroDetailComponent implements OnChanges {
-  @Input()
-  hero: Hero;
-  @Output()
-  unselect = new EventEmitter<string>();
-  @Output()
-  save = new EventEmitter<Hero>();
+  @Input() hero: Hero;
+  @Output() unselect = new EventEmitter<string>();
+  @Output() save = new EventEmitter<Hero>();
 
   addMode = false;
   editingHero: Hero;
