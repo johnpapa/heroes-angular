@@ -12,7 +12,7 @@ I love JavaScript and the Web! One of the most common questions I hear is "which
 
 ## Live Demos
 
-Hosted in [Azure](https://aka.ms/jp-free)
+Hosted in [Azure](https://azure.microsoft.com/en-us/free/?wt.mc_id=heroesangular-github-jopapa)
 
 - [Tour of Heroes with Angular](https://papa-heroes-angular.azurewebsites.net)
 - [Tour of Heroes with React](https://papa-heroes-react.azurewebsites.net)
