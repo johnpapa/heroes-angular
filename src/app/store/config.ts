@@ -1,4 +1,4 @@
-import { DefaultDataServiceConfig } from 'ngrx-data';
+import { DefaultDataServiceConfig } from '@ngrx/data';
 import { environment } from './../../environments/environment';
 
 const root = environment.API;
