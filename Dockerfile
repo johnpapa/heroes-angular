@@ -1,5 +1,9 @@
+# Base Stage/Layer
+FROM node:10.16-alpine as node-layer
+WORKDIR /usr/src/app
+
 # Client App
-FROM node:10.13-alpine as client-app
+FROM node-layer as client-app
 LABEL authors="John Papa"
 WORKDIR /usr/src/app
 COPY ["package.json", "npm-shrinkwrap.json*", "./"]
@@ -8,14 +12,14 @@ COPY . .
 RUN npx ng build --prod
 
 # Node server
-FROM node:10.13-alpine as node-server
+FROM node-layer as node-server
 WORKDIR /usr/src/app
 COPY ["package.json", "npm-shrinkwrap.json*", "./"]
 RUN npm install --production --silent && mv node_modules ../
 COPY server.js .
 
 # Final image
-FROM node:10.13-alpine
+FROM node-layer
 WORKDIR /usr/src/app
 # get the node_modules
 COPY --from=node-server /usr/src /usr/src
