@@ -1,12 +1,37 @@
 <div class="content-container">
-  <app-list-header title="Heroes" (add)="enableAddMode()" (refresh)="getHeroes()"></app-list-header>
+  <app-list-header
+    title="Heroes"
+    (add)="enableAddMode()"
+    (refresh)="getHeroes()"
+  ></app-list-header>
   <div class="columns is-multiline is-variable">
     <div class="column is-8" *ngIf="heroes$ | async as heroes">
-      <app-hero-list *ngIf="!selected" [heroes]="heroes" [selectedHero]="selected" (selected)="select($event)"
-        (deleted)="askToDelete($event)"></app-hero-list>
-      <app-hero-detail *ngIf="selected" [hero]="selected" (unselect)="clear()" (save)="save($event)"></app-hero-detail>
+      <app-hero-list
+        *ngIf="!selected"
+        [heroes]="heroes"
+        [selectedHero]="selected"
+        (selected)="select($event)"
+        (deleted)="askToDelete($event)"
+      ></app-hero-list>
+      <app-hero-detail
+        *ngIf="selected"
+        [hero]="selected"
+        (unselect)="clear()"
+        (save)="save($event)"
+      ></app-hero-detail>
     </div>
   </div>
 
-  <app-modal class="modal-hero" [message]="message" [isOpen]="showModal" (handleNo)="closeModal()" (handleYes)="deleteHero()"></app-modal>
+  <app-modal
+    class="modal-hero"
+    [message]="message"
+    [isOpen]="showModal"
+    (handleNo)="closeModal()"
+    (handleYes)="deleteHero()"
+  ></app-modal>
 </div>
+
+<tr *ngFor="let customer of customers">
+  <td>{{ customer.firstName }}</td>
+  <td>{{ customer.lastName }}</td>
+</tr>
