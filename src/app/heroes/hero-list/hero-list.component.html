@@ -1,11 +1,30 @@
 <ul class="list">
-  <li *ngFor="let hero of heroes; trackBy: byId; let i = index" role="presentation">
+  <li
+    *ngFor="let hero of heroes; trackBy: byId; let i = index"
+    role="presentation"
+  >
     <div class="card">
-      <app-card-content [name]="hero.name" [description]="hero.description"
+      <app-card-content
+        [name]="hero.name"
+        [description]="hero.description"
       ></app-card-content>
       <footer class="card-footer">
-        <app-button-footer class="card-footer-item" [className]="'delete-item'" [iconClasses]="'fas fa-trash'" (clicked)="deleteHero($event)" label="Delete" [item]="hero"></app-button-footer>
-        <app-button-footer class="card-footer-item" [className]="'edit-item'" [iconClasses]="'fas fa-edit'" (clicked)="selectHero($event)" label="Edit" [item]="hero"></app-button-footer>
+        <app-button-footer
+          class="card-footer-item"
+          [className]="'delete-item'"
+          [iconClasses]="'fas fa-trash'"
+          (clicked)="deleteHero($event)"
+          label="Delete"
+          [item]="hero"
+        ></app-button-footer>
+        <app-button-footer
+          class="card-footer-item"
+          [className]="'edit-item'"
+          [iconClasses]="'fas fa-edit'"
+          (clicked)="selectHero($event)"
+          label="Edit"
+          [item]="hero"
+        ></app-button-footer>
       </footer>
     </div>
   </li>
