@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start-ng": "ng serve --proxy-config proxy.conf.json --open",
+    "start-ng": "ng serve --proxy-config proxy.conf.json --port 7626 --open",
     "start": "WWW=dist/heroes-angular node server.js",
     "build": "ng build",
     "test": "ng test",
