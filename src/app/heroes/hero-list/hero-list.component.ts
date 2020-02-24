@@ -14,7 +14,6 @@ import { Hero } from '../../core';
 })
 export class HeroListComponent {
   @Input() heroes: Hero[];
-  @Input() selectedHero: Hero;
   @Output() deleted = new EventEmitter<Hero>();
   @Output() selected = new EventEmitter<Hero>();
 
@@ -26,7 +25,7 @@ export class HeroListComponent {
     this.deleted.emit(hero);
   }
 
-  byId(hero: Hero) {
+  trackByHero(index: number, hero: Hero): string {
     return hero.id;
   }
 }

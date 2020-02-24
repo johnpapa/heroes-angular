@@ -1,12 +1,31 @@
 <div class="content-container">
-  <app-list-header title="Villains" (add)="enableAddMode()" (refresh)="getVillains()"></app-list-header>
+  <app-list-header
+    title="Villains"
+    (add)="enableAddMode()"
+    (refresh)="getVillains()"
+  ></app-list-header>
   <div class="columns is-multiline is-variable">
     <div class="column is-8" *ngIf="villains$ | async as villains">
-      <app-villain-list *ngIf="!selected" [villains]="villains" [selectedVillain]="selected" (selected)="select($event)"
-        (deleted)="askToDelete($event)"></app-villain-list>
-      <app-villain-detail *ngIf="selected" [villain]="selected" (unselect)="clear()" (save)="save($event)"></app-villain-detail>
+      <app-villain-list
+        *ngIf="!selected"
+        [villains]="villains"
+        (selected)="select($event)"
+        (deleted)="askToDelete($event)"
+      ></app-villain-list>
+      <app-villain-detail
+        *ngIf="selected"
+        [villain]="selected"
+        (unselect)="clear()"
+        (save)="save($event)"
+      ></app-villain-detail>
     </div>
   </div>
 
-  <app-modal class="modal-villain" [message]="message" [isOpen]="showModal" (handleNo)="closeModal()" (handleYes)="deleteVillain()"></app-modal>
+  <app-modal
+    class="modal-villain"
+    [message]="message"
+    [isOpen]="showModal"
+    (handleNo)="closeModal()"
+    (handleYes)="deleteVillain()"
+  ></app-modal>
 </div>

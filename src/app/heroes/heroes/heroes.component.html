@@ -9,7 +9,6 @@
       <app-hero-list
         *ngIf="!selected"
         [heroes]="heroes"
-        [selectedHero]="selected"
         (selected)="select($event)"
         (deleted)="askToDelete($event)"
       ></app-hero-list>
