@@ -8,6 +8,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
+    "map": "source-map-explorer dist/heroes-angular/*es2015*.js*",
     "quick": "concurrently \"npm run backend\" \"npm run start-ng\"",
     "cypress": "npx cypress open",
     "e2e": "concurrently \"npm run quick\" \"npm run cypress\"",
@@ -62,6 +63,7 @@
     "karma-jasmine": "^3.1.1",
     "karma-jasmine-html-reporter": "^1.5.2",
     "protractor": "^5.4.3",
+    "source-map-explorer": "^2.3.1",
     "ts-node": "^8.6.2",
     "tslint": "^6.0.0",
     "typescript": "^3.7.5"
