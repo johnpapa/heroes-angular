@@ -8,6 +8,7 @@ import { CoreModule } from './core/core.module';
 import { AppStoreModule } from './store/store.module';
 import { AboutComponent } from './about.component';
 import { RouterModule } from '@angular/router';
+import { externalModules } from './build-specific';
 
 @NgModule({
   declarations: [AppComponent, AboutComponent],
@@ -16,7 +17,8 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     CoreModule,
     RouterModule.forRoot(routes),
-    AppStoreModule
+    AppStoreModule,
+    externalModules
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -25,9 +25,7 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "src/styles"
-              ]
+              "includePaths": ["src/styles"]
             },
             "styles": [
               "node_modules/bulma/css/bulma.min.css",
@@ -43,6 +41,10 @@
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
+                },
+                {
+                  "replace": "src/app/build-specific/index.ts",
+                  "with": "src/app/build-specific/index.prod.ts"
                 }
               ],
               "optimization": true,
