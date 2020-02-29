@@ -14,9 +14,7 @@ export class HeroesComponent implements OnInit {
   heroToDelete: Hero;
   showModal = false;
 
-  constructor(
-    private heroService: HeroService // , private modalService: ModalService
-  ) {
+  constructor(private heroService: HeroService) {
     this.heroes$ = heroService.entities$;
   }
 
