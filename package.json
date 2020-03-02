@@ -24,8 +24,6 @@
     "@angular/platform-browser": "^9.0.2",
     "@angular/platform-browser-dynamic": "^9.0.2",
     "@angular/router": "^9.0.2",
-    "@fortawesome/fontawesome-svg-core": "^1.2.27",
-    "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@ngrx/data": "^9.0.0-rc.0",
     "@ngrx/effects": "^9.0.0-rc.0",
     "@ngrx/entity": "^9.0.0-rc.0",
@@ -34,6 +32,7 @@
     "bulma": "^0.8.0",
     "core-js": "^3.6.4",
     "express": "^4.16.4",
+    "font-awesome": "^4.7.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.11.0",
     "zone.js": "~0.10.2"
