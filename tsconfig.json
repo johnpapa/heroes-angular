@@ -1,7 +1,8 @@
 {
   "compileOnSave": false,
   "angularCompilerOptions": {
-    "strictTemplates": true
+    "strictTemplates": true,
+    "strictInjectionParameters": true
   },
   "compilerOptions": {
     "baseUrl": "./",
