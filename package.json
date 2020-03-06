@@ -16,7 +16,6 @@
   },
   "private": true,
   "dependencies": {
-
     "@angular/animations": "^9.0.2",
     "@angular/common": "^9.0.2",
     "@angular/compiler": "^9.0.2",
@@ -48,7 +47,7 @@
     "@types/node": "^13.7.4",
     "codelyzer": "^5.1.2",
     "concurrently": "^5.1.0",
-    "cypress": "^4.0.2",
+    "cypress": "^4.1.0",
     "jasmine-core": "^3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "json-server": "^0.16.1",
