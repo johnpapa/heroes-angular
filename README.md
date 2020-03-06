@@ -4,7 +4,7 @@ This project was created to help represent a fundamental app written with Angula
 
 by [John Papa](http://twitter.com/john_papa)
 
-Comparative apps written with Vue and React can be found at at [github.com/johnpapa/heroes-vue](https://github.com/johnpapa/heroes-vue) and [github.com/johnpapa/heroes-react](https://github.com/johnpapa/heroes-react)
+Comparative apps can be found here with [Svelte](https://github.com/johnpapa/heroes-svelte), [React](https://github.com/johnpapa/heroes-react), and [Vue](https://github.com/johnpapa/heroes-vue)
 
 ## Why
 
@@ -16,6 +16,7 @@ Hosted in [Azure](https://azure.microsoft.com/en-us/free/?wt.mc_id=heroesangular
 
 - [Tour of Heroes with Angular](https://papa-heroes-angular.azurewebsites.net)
 - [Tour of Heroes with React](https://papa-heroes-react.azurewebsites.net)
+- Tour of Heroes with Svelte - coming soon!
 - [Tour of Heroes with Vue](https://papa-heroes-vue.azurewebsites.net)
 
 ## Getting Started
@@ -51,11 +52,39 @@ Hosted in [Azure](https://azure.microsoft.com/en-us/free/?wt.mc_id=heroesangular
 
 Each of these apps contain:
 
-- routing
-- lazy loading
-- container/presenter components
-- redux state management pattern
-- The same CSS
+Each of the apps written in the various frameworks/libraries has been designed to have similar features. While consistency is key, I want these apps to be comparable, yet done in an way authentic to each respective framework.
+
+Each project represents heroes and villains. The user can list them and edit them.
+
+Here is a list of those features:
+
+- [x] Start from the official quick-start and CLI
+- [x] Client side routing
+  - [x] Three main routes Heroes, Villains, About
+  - [x] Handles an erroneous route, leading to a PageNotFound component
+  - [x] Active route is highlighted in the nav menu
+  - [x] Routing should use html5 mode, not hash routes
+- [x] API
+  - [x] JSON server as a backend
+  - [x] App served on one port which can access API on another port proxy or CORS)
+  - [x] HTTP - Uses most common client http libraries for each framework
+- [x] Styling
+  - [x] Bulma
+  - [x] SASS
+  - [x] Font Awesome
+  - [x] Same exact css in every app
+- [x] Editing - Heroes and Villains will be editable (add, update, delete)
+- [x] State/Store - Uses a store for state management
+- [x] Web development server handles fallback routing
+- [x] Generic components
+  - [x] Modal
+  - [x] Button Tool
+  - [x] Card
+  - [x] Header bar
+  - [x] List header
+  - [x] Nav bar
+- [x] Props in and emit events out
+- [x] Environment variable for the API location
 
 ### Why Cypress?
 
@@ -69,20 +98,17 @@ The goal of the project was to show how each framework can be designed to create
 
 The app uses a JSON server for a backend by default. This allows you to run the code without needing any database engines or cloud accounts. Enjoy!
 
-### Why Docker?
-
-You can host the app any way you prefer. I chose Docker because it is familiar to me and makes it easy to run anywhere (local or cloud). You do you though and feel free to run this in yur own way.
-
 ## Problems or Suggestions
 
 [Open an issue here](/issues)
 
 ## Thank You
 
-Thank you to [Sarah Drasner](https://twitter.com/), [Brian Holt](https://twitter.com/), [Chris Noring](https://twitter.com/), [Craig Shoemaker](https://twitter.com/), and [Ward Bell](https://twitter.com/wardbell) for providing input and reviewing the code in the three repos for the Angular, React, and Vue apps:
+Thank you to [Sarah Drasner](https://twitter.com/), [Brian Holt](https://twitter.com/), [Chris Noring](https://twitter.com/), [Craig Shoemaker](https://twitter.com/), and [Ward Bell](https://twitter.com/wardbell) for providing input and reviewing the code in some of the repos for the Angular, React, Svelte, and Vue apps:
 
 - [heroes-angular](https://github.com/johnpapa/heroes-angular)
 - [heroes-react](https://github.com/johnpapa/heroes-react)
+- [heroes-svelte](https://github.com/johnpapa/heroes-svelte)
 - [heroes-vue](https://github.com/johnpapa/heroes-vue)
 
 ## Resources

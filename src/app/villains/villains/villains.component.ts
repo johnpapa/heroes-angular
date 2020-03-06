@@ -14,9 +14,7 @@ export class VillainsComponent implements OnInit {
   villainToDelete: Villain;
   showModal = false;
 
-  constructor(
-    private villainService: VillainService // , private modalService: ModalService
-  ) {
+  constructor(private villainService: VillainService) {
     this.villains$ = villainService.entities$;
   }
 
