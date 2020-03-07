@@ -11,10 +11,11 @@
       "remoteRoot": "/usr/src/app"
     },
     {
+      "name": "Launch Angular",
       "type": "chrome",
       "request": "launch",
-      "name": "Launch Angular in Chrome",
-      "url": "http://localhost:4200",
+      "preLaunchTask": "npm: quick",
+      "url": "http://localhost:7626/",
       "webRoot": "${workspaceFolder}"
     }
   ]
