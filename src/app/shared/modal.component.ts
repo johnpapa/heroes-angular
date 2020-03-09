@@ -1,5 +1,4 @@
 import { Component, EventEmitter, OnInit, Input, Output } from '@angular/core';
-import { Hero } from '../core';
 
 @Component({
   selector: 'app-modal',

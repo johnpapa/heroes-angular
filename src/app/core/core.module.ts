@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SharedModule } from '../shared/shared.module';
 import { HeaderBarBrandComponent } from './header-bar-brand.component';
 import { HeaderBarLinksComponent } from './header-bar-links.component';
@@ -20,7 +19,6 @@ const components = [
 @NgModule({
   imports: [
     CommonModule,
-    // FontAwesomeModule,
     RouterModule, // because we use <router-outlet> and routerLink
     SharedModule
   ],
