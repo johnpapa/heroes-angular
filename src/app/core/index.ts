@@ -1,5 +1,2 @@
-export * from './core.module';
-export * from './header-bar.component';
+export * from './components';
 export * from './model';
-export * from './nav.component';
-export * from './not-found.component';
