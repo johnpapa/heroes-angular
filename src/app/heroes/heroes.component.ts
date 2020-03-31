@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Hero } from '../../core';
-import { HeroService } from '../hero.service';
+import { Hero } from '../core';
+import { HeroService } from './hero.service';
 
 @Component({
   selector: 'app-heroes',

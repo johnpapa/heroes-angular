@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Villain } from '../../core';
-import { VillainService } from '../villain.service';
+import { Villain } from '../core';
+import { VillainService } from './villain.service';
 
 @Component({
   selector: 'app-villains',
