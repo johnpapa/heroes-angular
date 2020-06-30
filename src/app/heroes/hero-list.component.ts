@@ -5,7 +5,7 @@ import {
   Output,
   ChangeDetectionStrategy
 } from '@angular/core';
-import { Hero } from '../../core';
+import { Hero } from '../core';
 
 @Component({
   selector: 'app-hero-list',

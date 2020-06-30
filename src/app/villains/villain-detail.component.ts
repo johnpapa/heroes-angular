@@ -8,7 +8,7 @@ import {
   ChangeDetectionStrategy
 } from '@angular/core';
 
-import { Villain } from '../../core';
+import { Villain } from '../core';
 
 @Component({
   selector: 'app-villain-detail',
