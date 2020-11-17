@@ -25,6 +25,10 @@ export class HeroListComponent {
     this.deleted.emit(hero);
   }
 
+  // trackByHero(hero: Hero): string {
+  //   return hero.id;
+  // }
+
   trackByHero(index: number, hero: Hero): string {
     return hero.id;
   }
