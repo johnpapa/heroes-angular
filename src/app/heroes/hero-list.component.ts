@@ -29,7 +29,7 @@ export class HeroListComponent {
   //   return hero.id;
   // }
 
-  trackByHero(index: number, hero: Hero): string {
+  trackByHero(_ /* index not used */: number, hero: Hero): string {
     return hero.id;
   }
 }

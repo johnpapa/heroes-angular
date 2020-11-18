@@ -11,7 +11,16 @@
       "remoteRoot": "/usr/src/app"
     },
     {
-      "name": "Launch Angular",
+      "name": "Launch Angular with Edge",
+      "type": "edge",
+      "version": "dev",
+      "request": "launch",
+      "preLaunchTask": "npm: quick",
+      "url": "http://localhost:7626/",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Launch Angular with Chrome",
       "type": "chrome",
       "request": "launch",
       "preLaunchTask": "npm: quick",
