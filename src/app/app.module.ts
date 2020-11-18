@@ -15,7 +15,7 @@ import { declarations } from './core';
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
     AppStoreModule,
     externalModules
   ],
