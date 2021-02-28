@@ -1,4 +1,4 @@
-# Tour of Heroes
+# Tour of Heroes 
 
 This project was created to help represent a fundamental app written with Angular. The heroes and villains theme is used throughout the app.
 
