@@ -15,7 +15,6 @@
       <app-hero-detail
         *ngIf="selected"
         [hero]="selected"
-        (unselect)="clear()"
         (save)="save($event)"
       ></app-hero-detail>
     </div>
