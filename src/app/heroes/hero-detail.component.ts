@@ -25,7 +25,7 @@ export class HeroDetailComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges) {
     if (this.hero && this.hero.id) {
-      this.editingHero = this.hero;
+      this.editingHero = { ...this.hero };
       this.addMode = false;
     } else {
       this.editingHero = { id: undefined, name: '', description: '' };
