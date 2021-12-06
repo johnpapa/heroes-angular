@@ -5,7 +5,7 @@ import {
   OnChanges,
   Output,
   SimpleChanges,
-  ChangeDetectionStrategy
+  ChangeDetectionStrategy,
 } from '@angular/core';
 
 import { Hero } from '../core';
@@ -13,7 +13,7 @@ import { Hero } from '../core';
 @Component({
   selector: 'app-hero-detail',
   templateUrl: './hero-detail.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeroDetailComponent implements OnChanges {
   @Input() hero: Hero;
@@ -25,7 +25,7 @@ export class HeroDetailComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges) {
     if (this.hero && this.hero.id) {
-      this.editingHero = { ...this.hero };
+      this.editingHero = this.hero;
       this.addMode = false;
     } else {
       this.editingHero = { id: undefined, name: '', description: '' };
