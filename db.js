@@ -31,6 +31,14 @@ const heroes = [
   },
 ];
 
+const citizena = [
+  {
+    id: 'CitizenBraver',
+    name: 'Braver The Weak',
+    description: 'cowers in fear'
+  },
+];
+
 const villains = [
   {
     id: 'VillainMadelyn',
@@ -54,6 +62,6 @@ const villains = [
   },
 ];
 
-const data = { heroes: heroes, villains: villains };
+const data = { heroes: heroes, villains: villains, citizens: citizens };
 
 module.exports = data;

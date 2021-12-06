@@ -7,13 +7,18 @@ export const routes: Routes = [
   {
     path: 'heroes',
     loadChildren: () =>
-      import('./heroes/heroes.module').then(m => m.HeroesModule)
+      import('./heroes/heroes.module').then((m) => m.HeroesModule),
+  },
+  {
+    path: 'citizens',
+    loadChildren: () =>
+      import('./citizens/citizens.module').then((m) => m.CitizensModule),
   },
   {
     path: 'villains',
     loadChildren: () =>
-      import('./villains/villains.module').then(m => m.VillainsModule)
+      import('./villains/villains.module').then((m) => m.VillainsModule),
   },
   { path: 'about', component: AboutComponent },
-  { path: '**', component: NotFoundComponent }
+  { path: '**', component: NotFoundComponent },
 ];

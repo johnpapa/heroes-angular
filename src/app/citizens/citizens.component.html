@@ -1,0 +1,30 @@
+<div class="content-container">
+  <app-list-header
+    title="Citizens"
+    (add)="enableAddMode()"
+    (refresh)="getCitizens()"
+  ></app-list-header>
+  <div class="columns is-multiline is-variable">
+    <div class="column is-8" *ngIf="citizens$ | async as citizens">
+      <app-citizen-list
+        *ngIf="!selected"
+        [citizens]="citizens"
+        (selected)="select($event)"
+        (deleted)="askToDelete($event)"
+      ></app-citizen-list>
+      <app-citizen-detail
+        *ngIf="selected"
+        [citizen]="selected"
+        (save)="save($event)"
+      ></app-citizen-detail>
+    </div>
+  </div>
+
+  <app-modal
+    class="modal-citizen"
+    [message]="message"
+    [isOpen]="showModal"
+    (handleNo)="closeModal()"
+    (handleYes)="deleteCitizen()"
+  ></app-modal>
+</div>

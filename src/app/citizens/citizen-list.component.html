@@ -1,0 +1,31 @@
+<ul class="list">
+  <li
+    *ngFor="let citizen of citizens; trackBy: trackByCitizen; let i = index"
+    role="presentation"
+  >
+    <div class="card">
+      <app-card-content
+        [name]="citizen.name"
+        [description]="citizen.description"
+      ></app-card-content>
+      <footer class="card-footer">
+        <app-button-footer
+          class="card-footer-item"
+          [className]="'delete-item'"
+          [iconClasses]="'fas fa-trash'"
+          (clicked)="deleteCitizen($event)"
+          label="Delete"
+          [item]="citizen"
+        ></app-button-footer>
+        <app-button-footer
+          class="card-footer-item"
+          [className]="'edit-item'"
+          [iconClasses]="'fas fa-edit'"
+          (clicked)="selectCitizen($event)"
+          label="Edit"
+          [item]="citizen"
+        ></app-button-footer>
+      </footer>
+    </div>
+  </li>
+</ul>

@@ -31,6 +31,18 @@
       "description": "daughter of Earl Herrauðr of Götaland"
     }
   ],
+  "citizens": [
+    {
+      "id": "CitizenBraver",
+      "name": "Braver The Weak",
+      "description": "cowers in fear"
+    },
+    {
+      "name": "Quiet Guy",
+      "description": "says nothing",
+      "id": "jyFtv8T"
+    }
+  ],
   "villains": [
     {
       "id": "VillainMadelyn",
