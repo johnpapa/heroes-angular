@@ -1,3 +1,5 @@
+[![AI-Ready](https://img.shields.io/badge/AI--Ready-✓-blueviolet)](#ai-ready)
+
 # Tour of Heroes
 
 This project was created to help represent a fundamental app written with Angular. The heroes and villains theme is used throughout the app.
@@ -101,6 +103,29 @@ The app uses a JSON server for a backend by default. This allows you to run the 
 ## Problems or Suggestions
 
 [Open an issue here](/issues)
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feat/my-feature`)
+3. Install dependencies: `npm install`
+4. Start the dev environment: `npm run quick`
+5. Make your changes following the conventions in `.github/copilot-instructions.md`
+6. Run linting: `npm run lint`
+7. Run unit tests: `npm test`
+8. Run Cypress e2e tests: `npm run e2e`
+9. Commit your changes and open a pull request against `main`
+
+See `AGENTS.md` for architecture details and `CHANGELOG.md` for version history.
+
+## AI-Ready
+
+This repository is configured for AI-assisted development:
+
+- **`AGENTS.md`** — Onboarding guide for AI coding agents
+- **`.github/copilot-instructions.md`** — Project conventions and maintenance matrix
+- **`.github/workflows/ci.yml`** — Automated CI (lint, build, test)
+- **Issue & PR templates** — Structured collaboration workflows
 
 ## Thank You
 
