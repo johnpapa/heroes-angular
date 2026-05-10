@@ -8,6 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
         <h2 class="title">{{title}}</h2>
       </a>
       <button
+        style="margin-left: 10px"
         class="button add-button"
         (click)="handleAdd()"
         aria-label="add"
@@ -15,6 +16,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
         <i class="fas fa-plus" aria-hidden="true"></i>
       </button>
       <button
+        style="margin-left: 10px"
         class="button refresh-button"
         (click)="handleRefresh()"
         aria-label="refresh"
